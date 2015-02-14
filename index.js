@@ -48,6 +48,7 @@ waitstate.setDefaults = function (opts) {
  * If no container specified then enable on entire body.
  * @param {HTMLElement|String} container can be element, query selector or message
  * @param {String} message defaults to "Loading..." or default message
+ * @return {Function} Callback to stop this particular waitstate.
  */
 waitstate.start = function (container, message) {
   var element, messageNode;
@@ -63,7 +64,7 @@ waitstate.start = function (container, message) {
     container = defaults.body;
   }
 
-  element = document.createElement('div'); // This should be the appropriate child node of the container... li, td etc
+  element = document.createElement('div'); // TODO: This should be the appropriate child node of the container... li, td etc
   element.innerHTML = defaults.template;
   addClass(element, WAIT_STATE_CLASS);
   if (messageNode = element.querySelector('.'+WAIT_STATE_CLASS+'-message')) messageNode.innerText = message;
