@@ -1,0 +1,95 @@
+.has-wait-state-position {
+  position: relative;
+}
+
+.wait-state {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.wait-state .wait-state-inner {
+  display: block;
+  position: absolute;
+  top: 25%;
+  overflow: hidden;
+  width: 100%;
+}
+
+body > .wait-state {
+  position: fixed;
+  z-index: 10000;
+}
+
+.wait-state .wait-state-symbol {
+
+}
+
+.wait-state .wait-state-symbol,
+.wait-state .wait-state-symbol:before,
+.wait-state .wait-state-symbol:after {
+  border-radius: 50%;
+}
+.wait-state .wait-state-symbol:before,
+.wait-state .wait-state-symbol:after {
+  position: absolute;
+  content: '';
+}
+.wait-state .wait-state-symbol:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #0dcecb;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: spinner 2s infinite ease 1.5s;
+  animation: spinner 2s infinite ease 1.5s;
+}
+.wait-state .wait-state-symbol {
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 5em auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em #FFF;
+}
+.wait-state .wait-state-symbol:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #0dcecb;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: spinner 2s infinite ease;
+  animation: spinner 2s infinite ease;
+}
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

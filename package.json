@@ -1,0 +1,31 @@
+{
+  "name": "wait-state",
+  "version": "1.0.0",
+  "description": "Simple way to apply a wait state anywhere",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yallups/wait-state.git"
+  },
+  "keywords": [
+    "waitstate",
+    "loading"
+  ],
+  "author": "Shawn <mryallups@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yallups/wait-state/issues"
+  },
+  "homepage": "https://github.com/yallups/wait-state",
+  "dependencies": {
+    "amp-add-class": "^1.1.0",
+    "amp-is-object": "^1.0.1",
+    "amp-remove-class": "^1.1.0",
+    "css-sheet-injector": "git://github.com/yallups/css-sheet-injector",
+    "domify": "^1.3.1",
+    "isElement": "git://github.com/yallups/isElement"
+  }
+}
